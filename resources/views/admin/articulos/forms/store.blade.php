@@ -1,0 +1,188 @@
+<div class="row">
+    <div class="col-md-5">
+        <label for="inputEmail4">Nombre:</label>
+        <input type="text" class="form-control" name="nombre" value="@isset($articulo->nombre){{ $articulo->nombre }}@endisset" required>
+    </div>
+
+    <div class="col-md-7 ">
+        <label for="">Codigo de Barras</label>
+        <input type="text" class="form-control" name="cod_barras" value="@isset($articulo->cod_barras){{ $articulo->cod_barras }}@endisset">
+    </div>
+
+</div>
+
+
+<hr>
+<div class="row justify-content-center">
+    <div class="col-md-2">
+        <label for="">Precio Venta:</label>
+        <input type="number" class="form-control" required name="p_venta" step="any" value="@isset($articulo->p_venta){{ $articulo->p_venta }}@endisset">
+    </div>
+
+    <div class="col-md-2">
+        <label for="">Precio Costo:</label>
+        <input type="number" class="form-control" required name="p_costo" step="any" value="@isset($articulo->p_costo){{ $articulo->p_costo }}@endisset">
+    </div>
+
+    <div class="col-md-2">
+        <label for="">Cantidad / Stock: </label>
+        <input type="number" class="form-control" name="stock" id="stock1" step="any" value="@isset($articulo->stock){{ $articulo->stock }}@endisset">
+    </div>
+
+    <div class="col-md-2">
+        <label for="">Minimo de Stock:</label>
+        <input type="number" class="form-control text-uppercase" name="min_stock" value="@isset($articulo->min_stock){{ $articulo->min_stock }}@endisset" value="0">
+    </div>
+
+    <div class="col-md-2">
+        <label for="">Maximo de Stock:</label>
+        <input type="number" class="form-control text-uppercase" name="stock_maximo" value="@isset($articulo->stock_maximo){{ $articulo->stock_maximo }}@endisset" value="0">
+    </div>
+
+</div>
+
+<!-- <hr> -->
+<div class="d-flex justify-content-center ">
+
+    <div class="table-responsive col-md-8 d-none">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>MINIMO</th>
+                    <th>MAXIMO</th>
+                    <th>PRECIO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <input value="@isset($articulo->minimo1){{$articulo->minimo1}}@endisset" type="number" step="any" name="minimo1" placeholder="minimo1" class="form-control"></td>
+
+                    <td> <input value="@isset($articulo->maximo1){{$articulo->maximo1}}@endisset" type="number" step="any" name="maximo1" placeholder="maximo1" class="form-control"></td>
+
+                    <td> <input value="@isset($articulo->precio1){{$articulo->precio1}}@endisset" type="number" step="any" name="precio1" placeholder="precio1" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td> <input value="@isset($articulo->minimo2){{$articulo->minimo2}}@endisset" type="number" step="any" name="minimo2" placeholder="minimo2" class="form-control"></td>
+
+                    <td> <input value="@isset($articulo->maximo2){{$articulo->maximo2}}@endisset" type="number" step="any" name="maximo2" placeholder="maximo2" class="form-control"></td>
+
+                    <td> <input value="@isset($articulo->precio2){{$articulo->precio2}}@endisset" type="number" step="any" name="precio2" placeholder="precio2" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td> <input value="@isset($articulo->minimo3){{$articulo->minimo3}}@endisset" type="number" step="any" name="minimo3" placeholder="minimo3" class="form-control"></td>
+
+                    <td> <input value="@isset($articulo->maximo3){{$articulo->maximo3}}@endisset" type="number" step="any" name="maximo3" placeholder="maximo3" class="form-control"></td>
+
+                    <td> <input value="@isset($articulo->precio3){{$articulo->precio3}}@endisset" type="number" step="any" name="precio3" placeholder="precio3" class="form-control"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- <hr> -->
+<div class="row justify-content-center d-none">
+    <div class="col-md-2">
+        <label for="inputEmail4">Marca / Fabricante:</label>
+        <input type="text" class="form-control" name="fabricante" value="@isset($articulo->fabricante){{ $articulo->fabricante }}@endisset">
+    </div>
+    <div class="col-md-2">
+        <label for="inputEmail4">Locacion:</label>
+        <input type="text" class="form-control" name="medida" value="@isset($articulo->medida){{ $articulo->medida }}@endisset">
+    </div>
+    <div class="col-md-2">
+        <label for="inputEmail4">Estanteria:</label>
+        <input type="text" class="form-control" name="unidad" value="@isset($articulo->unidad){{ $articulo->unidad }}@endisset">
+    </div>
+    <div class="col-md-2">
+        <label for="inputEmail4">Sub-estanteria:</label>
+        <input type="text" class="form-control" name="ubicacion" value="@isset($articulo->ubicacion){{ $articulo->ubicacion }}@endisset">
+    </div>
+</div>
+
+
+
+<div class="row justify-content-center d-none">
+    <hr>
+    <div class="col">
+        <label for="inputEmail4">Etiqueta Equivalente:</label>
+        <input type="text" class="form-control" name="eti_equivalente" value="@isset($articulo->eti_equivalente){{ $articulo->eti_equivalente }}@endisset">
+    </div>
+    <div class="col">
+        <label for="inputEmail4">Etiqueta de Carro:</label>
+        <input type="text" class="form-control" name="eti_carro" value="@isset($articulo->eti_carro){{ $articulo->eti_carro }}@endisset">
+    </div>
+</div>
+
+
+<hr>
+
+<div class="row justify-content-center">
+
+    <div class="col-md-5">
+        <label for="">Categoria / Tipo de Venta</label>
+        <select class="form-control" name="categoria_id" required>
+            <option value="@isset($articulo->categoria_id){{ $articulo->categoria_id }}@endisset"> @if (isset($articulo->categoria_id))
+                {{$articulo->nomCat}} / {{$articulo->tipo}}
+                @else
+                Seleccione Categoria
+                @endif
+            </option>
+            @foreach($categoria as $cat)
+            <option value="{{$cat->id}}">{{$cat->nombre}} </option>
+            @endforeach
+        </select>
+    </div>
+
+    <div class="col-md-5">
+        <label for="">Proveedor</label>
+        <select class="form-control" name="proveedor_id" required id="proveedor_id">
+            @if (isset($articulo->proveId))
+            <option value="@isset($articulo->proveId){{ $articulo->proveId }}@endisset">
+                {{$articulo->provName}} / {{$articulo->telefono1}}
+                @else
+                Seleccione Proveedor
+            </option>
+            @endif
+            @foreach($proveedor as $pro)
+            <option value="{{$pro->id}}">{{$pro->nombre}} / {{$pro->telefono1}}</option>
+            @endforeach
+        </select>
+    </div>
+
+</div>
+
+<hr>
+
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="">
+            <label for="">Imagen</label>
+            <input type="text" class="form-control" name="img" value="@isset($articulo->img){{ $articulo->img }}@endisset">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="">
+            <label for="">Imagen Secundaria</label>
+            <input type="text" class="form-control" name="img2" value="@isset($articulo->img2){{ $articulo->img2 }}@endisset">
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="form-group col-6">
+        <label for="">Descripcion:</label>
+        <textarea class="form-control" name="descripcion" id="editor1" rows="10">@if(isset($articulo->descripcion)){{$articulo->descripcion}}@endif</textarea>
+    </div>
+
+    <div class="form-group col-6">
+        <label for="">Descripcion Interna:</label>
+        <textarea class="form-control" id="editor2" placeholder="Colocamos Descuentos,  O informacion Util para el futuro esto no se vera en el recibo" name="descripcion_interna" rows="10">@if(isset($articulo->descripcion_interna)){{$articulo->descripcion_interna}}@endif</textarea>
+    </div>
+
+</div>
