@@ -211,9 +211,9 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div> 
 
-    <div class="row mb-5 d-none">
+    <div class="row mb-5">
         <div class="col-md-6">
 
             <div class="card">
@@ -279,7 +279,7 @@
         </div>
     </div>
 
-    <div class="row d-none">
+    <div class="row">
         <div class="col">
             <div class="card">
                 <div class="card-body table-responsive">
