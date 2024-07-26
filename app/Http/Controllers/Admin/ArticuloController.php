@@ -28,6 +28,8 @@ class ArticuloController extends Controller
                 'art.id',
                 'art.descripcion_interna',
                 'art.min_stock',
+                'art.fabricante as talla'
+
             )
             ->where('art.deleted_at', null)
             ->get();
@@ -57,7 +59,7 @@ class ArticuloController extends Controller
             $articulo->cod_barras = $code;
         } else {
 
-            $articulo->cod_barras = 'x' . $request->cod_barras;
+            $articulo->cod_barras = '' . $request->cod_barras;
         }
 
         $articulo->descripcion = $request->descripcion;
@@ -288,7 +290,8 @@ class ArticuloController extends Controller
                 'ven.created_at as fechaVenta',
                 'art.nombre as nomArt',
                 'art.cod_barras',
-                'art.descripcion'
+                'art.descripcion',
+                'art.fabricante',
 
             )
             ->whereMonth('ven.created_at', $data->mes)

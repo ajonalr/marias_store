@@ -19,7 +19,7 @@
 
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>MENU</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Articulos</a>
                <ul class="sub-menu children dropdown-menu">
 
                   @can('articulos_listado')
@@ -67,10 +67,12 @@
                      </a>
                   </li>
                   @endcan
-                  <a class="" href="{{route('catalogo.index')}}">
-                     <i class="fa fa-ellipsis-v"></i>
-                     Articulos En Oferta
-                  </a>
+                  <li>
+                     <a class="" href="{{route('catalogo.index')}}">
+                        <i class="fa fa-ellipsis-v"></i>
+                        Articulos En Oferta
+                     </a>
+                  </li>
                   @can('articulos_catalogo_report')
                   <li>
 
@@ -325,6 +327,18 @@
                </ul>
             </li>
 
+
+            <li class="menu-item-has-children dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Mobiliario</a>
+               <ul class="sub-menu children dropdown-menu">
+
+                  <li><a href="{{route('mobiliario.index')}}">Inicio</a></li>
+                  <li><a href="{{route('mobiliario.create')}}">Registro de Mobiliario</a></li>
+                  <li><a href="{{route('mobiliario.reporte')}}">Reportes</a></li>
+
+
+               </ul>
+            </li>
 
             @canany(['users_access','roles_access','permissions_access'])
             <li class="menu-item-has-children dropdown">

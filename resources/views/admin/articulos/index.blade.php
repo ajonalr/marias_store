@@ -54,7 +54,9 @@
                                         @endcan
 
                                     </td>
-                                    <td>{{$art->nombre}}</td>
+                                    <td>{{$art->nombre}} <br>
+                                        Talla: {{$art->talla}}
+                                    </td>
                                     <td>@php
                                         echo $art->descripcion;
                                         @endphp</td>
@@ -103,7 +105,7 @@
             ],
         });
 
-        
+
     });
 </script>
 @endsection

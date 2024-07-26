@@ -33,7 +33,7 @@
                             <div class="card-body row">
 
 
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <h2 class="text-uppercase text-center">{{$articulo->nombre}}</h2>
 
                                     <p class="text-uppercase">
@@ -60,19 +60,20 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <p class="card-text">Fabricante:{{$articulo->fabricante}}</p>
-                                            <p class="card-text">Medida:{{$articulo->medida}}</p>
-                                            <p class="card-text">Estante:{{$articulo->unidad}}</p>
-                                            <p class="card-text">Sub-Estante:{{$articulo->ubicacion}}</p>
+                                            <h4>Talla: <span class="badge badge-primary">{{$articulo->fabricante}}</span></h4>
 
-                                        </div>
 
-                                        <div class="col-md-6">
-                                            <p class="card-text">Fecha de Registro: {{$articulo->created_at}}</p>
+
+                                            <div class="card-text">Url de Compra:
+
+                                                <a name="" id="" class="btn btn-warning btn-sm" href="{{$articulo->medida}}" role="button" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> URL DE COMPRA</a>
+                                            </div>
+
+                                            <p class="card-text mt-3">Fecha de Registro: {{$articulo->created_at}}</p>
                                             <p>Minimo de Stock: {{$articulo->min_stock}}</p>
                                             <p class="card-text">Existencia:
                                                 @if($articulo->stock > $articulo->min_stock)
-                                                <span class="badge bg-success" style="font-size: 15px;">{{$articulo->stock}}</span>
+                                                <span class="badge bg-success" style="font-size: 15px; color: white;">{{$articulo->stock}}</span>
                                                 @else
                                                 <span class="badge bg-warning" style="font-size: 15px;">{{$articulo->stock}} (Poca existencia)</span>
                                                 @endif
@@ -81,7 +82,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 d-none">
                                     <h4>INGREDIENTES</h4>
                                     @foreach ($ingredients as $ing)
                                     <p>{{$ing->ingrediente->nombre}} - SALIDA DE ARTICULO: {{$ing->cantidad}}u</p>
@@ -95,7 +96,7 @@
                                     @endforeach
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-6">
 
                                     <h3>DATOS DE PROVEEDOR</h3>
                                     <p>Nombre de Vendedor: {{$articulo->provName}}</p>

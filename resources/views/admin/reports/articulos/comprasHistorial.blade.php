@@ -23,7 +23,8 @@
                         <tbody>
                             @foreach($historial as $data)
                             <tr>
-                                <td>{{$data->nombre}}</td>
+                            <td>{{$data->nombre}} - {{$data->talla}}</td>
+
                                 <td><?php echo $data->descripcion ?></td>
                                 <td>{{$data->factura}}</td>
                                 <td>{{$data->cantidad}}</td>

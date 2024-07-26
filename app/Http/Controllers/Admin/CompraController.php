@@ -20,7 +20,7 @@ class CompraController extends Controller
 
         $articulos = DB::table('articulos as art')
             ->join('categoria as cat', 'art.categoria_id', '=', 'cat.id')
-            ->select('cat.nombre as nomCat', 'cat.tipo', 'art.nombre', 'art.cod_barras', 'art.descripcion', 'art.p_venta', 'art.p_costo', 'art.stock', 'art.img', 'art.id')
+            ->select('cat.nombre as nomCat', 'cat.tipo', 'art.nombre', 'art.cod_barras', 'art.descripcion', 'art.p_venta', 'art.p_costo', 'art.stock', 'art.img', 'art.id', 'art.fabricante as talla')
             ->where('art.deleted_at', null)
             ->get();
 
@@ -43,7 +43,7 @@ class CompraController extends Controller
             $historias = DB::table('compra_articulos as ca')
                 ->join('articulos as art', 'ca.articulo_id', '=', 'art.id')
                 ->join('users as use', 'ca.user_id', '=', 'use.id')
-                ->select('art.nombre', 'art.descripcion', 'art.img', 'ca.id as idCom', 'ca.factura', 'ca.cantidad', 'ca.fecha', 'art.id', 'ca.user_id', 'use.name')
+                ->select('art.nombre', 'art.descripcion', 'art.img', 'ca.id as idCom', 'ca.factura', 'ca.cantidad', 'ca.fecha', 'art.id', 'ca.user_id', 'use.name', 'art.fabricante as talla')
                 ->whereBetween('ca.created_at', [$request->inicio, $request->fin])
                 ->orderBy('ca.id', 'DESC')
                 ->get();
@@ -110,6 +110,7 @@ class CompraController extends Controller
                 'ca.fecha',
                 'art.id',
                 'user.name as userName',
+                'art.fabricante as talla'
             )
             ->whereBetween('ca.created_at', [$request->inicio, $request->fin])
             ->orderBy('ca.id', 'DESC')

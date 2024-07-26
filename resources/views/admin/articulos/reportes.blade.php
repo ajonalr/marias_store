@@ -176,7 +176,7 @@
 
                     <select name="articulo_id" id="articulo">
                         @foreach ($data as $d)
-                        <option value="{{$d->id}}">{{$d->nombre}}, <?php echo $d->descripcion;?></option>
+                        <option value="{{$d->id}}">{{$d->nombre}}, -{{$d->fabricante}} -<?php echo $d->descripcion;?></option>
                         @endforeach
                     </select>
                         <div class="form-group">

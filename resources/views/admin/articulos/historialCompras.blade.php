@@ -50,7 +50,7 @@
                         @endcan
 
                         <div class="card-body">
-                            <h4 class="card-title">{{$art->nombre}}</h4>
+                            <h4 class="card-title">{{$art->nombre}} - {{$art->talla}}</h4>
 
                             <p class="card-text">Descripcion: <?php echo $art->descripcion ?> <br> Numero de Factura: {{$art->factura}}</p>
                             <p>Ingreso: {{$art->name}}</p>

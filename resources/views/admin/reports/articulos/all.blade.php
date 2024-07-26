@@ -44,7 +44,7 @@
                                 $pcostoTotal = $pcostoTotal + ($art->p_costo * $art->stock);
 
                                 ?>
-                                <td>{{$art->nombre}}</td>
+                                <td>{{$art->nombre}} - {{$art->fabricante}}</td>
                                 <td><?php echo $art->descripcion ?></td>
                                 <td>{{$art->nomCat}}</td>
                                 <td>Q. {{number_format($art->p_venta, 2)}}</td>

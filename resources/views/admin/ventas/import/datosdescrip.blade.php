@@ -5,15 +5,15 @@
       <input type="text" class="form-control" id="preciog">
 
    </div>
-   <div class="col-md-3 d-none">
+   <div class="col-md-3">
       Existencia
       <input type="text" class="form-control" placeholder="Existencia" disabled id="existenciag">
    </div>
 
 
-   <div class="col-md-3 d-none">
+   <div class="col-md-3 ">
       Descuento Unitario
-      <input type="number" class="form-control" placeholder="Descuento" id="descuentog" disabled>
+      <input type="number" class="form-control" placeholder="Descuento" id="descuentog" >
    </div>
 
    <div class="col-md-3">
@@ -22,7 +22,7 @@
       </button>
    </div>
 
-   <div class="col-md-3">
+   <div class="col-md-3 d-none">
       <a type="button" target="_blank" href="{{route('venta.index')}}" class="btn btn-primary btn-lg btn-block">NUEVO PEDIDO</a>
    </div>
 </div>

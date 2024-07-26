@@ -12,7 +12,7 @@
                <select class="form-control" name="articulo" id="articulo" autofocus>
                   <option value="">Seleccione Articulo</option>
                   @foreach($articulos as $art)
-                  <option value="{{$art->id}}__{{$art->stock}}__{{$art->p_venta}}__{{$art->descripcion}}">{{$art->nombre}} <?php echo $art->descripcion; ?> --{{$art->nomCat}}--, Stock: {{$art->stock}}, {{$art->cod_barras}} </option>
+                  <option value="{{$art->id}}__{{$art->stock}}__{{$art->p_venta}}__{{$art->descripcion}}">{{$art->nombre}} <?php echo $art->descripcion; ?> -- {{$art->talla}} --{{$art->nomCat}}--, Stock: {{$art->stock}}, {{$art->cod_barras}} </option>
                   @endforeach
                </select>
                <br>

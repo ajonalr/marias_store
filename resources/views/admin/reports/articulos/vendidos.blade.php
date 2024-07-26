@@ -25,7 +25,7 @@
                             @foreach($articulos as $art)
                             <tr>
                                 <td>{{$art->factura_id}}</td>
-                                <td>{{$art->nomArt}} <?php echo $art->descripcion?></td>
+                                <td>{{$art->nomArt}} - {{$art->fabricante}} <?php echo $art->descripcion?></td>
                                 <td>{{$art->cantidad}}</td>
                                 <td>{{$art->fechaVenta}}</td>
                                 <?php $total = $total + $art->cantidad; ?>

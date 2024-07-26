@@ -11,6 +11,40 @@
 
 </div>
 
+<div class="row justify-content-center ">
+
+    <div class="col-md-5">
+        <label for="inputEmail4">Talla:</label>
+        <select class="form-control" name="fabricante">
+            @isset($articulo->fabricante)
+            <option value="{{$articulo->fabricante}}"> {{$articulo->fabricante}}</option>
+            @endisset
+            <option value="">SELECCIONE UNA TALLA</option>
+            <option value="NO APLICA">NO APLICA</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+        </select>
+    </div>
+
+    <div class="col-md-5">
+        <label for="inputEmail4">URL de Compra:</label>
+        <input type="text" class="form-control" name="medida" value="@isset($articulo->medida){{ $articulo->medida }}@endisset">
+    </div>
+
+
+    <div class="col-md-2 d-none">
+        <label for="inputEmail4">Estanteria:</label>
+        <input type="text" class="form-control" name="unidad" value="@isset($articulo->unidad){{ $articulo->unidad }}@endisset">
+    </div>
+    <div class="col-md-2 d-none">
+        <label for="inputEmail4">Sub-estanteria:</label>
+        <input type="text" class="form-control" name="ubicacion" value="@isset($articulo->ubicacion){{ $articulo->ubicacion }}@endisset">
+    </div>
+</div>
 
 <hr>
 <div class="row justify-content-center">
@@ -82,24 +116,7 @@
 </div>
 
 <!-- <hr> -->
-<div class="row justify-content-center d-none">
-    <div class="col-md-2">
-        <label for="inputEmail4">Marca / Fabricante:</label>
-        <input type="text" class="form-control" name="fabricante" value="@isset($articulo->fabricante){{ $articulo->fabricante }}@endisset">
-    </div>
-    <div class="col-md-2">
-        <label for="inputEmail4">Locacion:</label>
-        <input type="text" class="form-control" name="medida" value="@isset($articulo->medida){{ $articulo->medida }}@endisset">
-    </div>
-    <div class="col-md-2">
-        <label for="inputEmail4">Estanteria:</label>
-        <input type="text" class="form-control" name="unidad" value="@isset($articulo->unidad){{ $articulo->unidad }}@endisset">
-    </div>
-    <div class="col-md-2">
-        <label for="inputEmail4">Sub-estanteria:</label>
-        <input type="text" class="form-control" name="ubicacion" value="@isset($articulo->ubicacion){{ $articulo->ubicacion }}@endisset">
-    </div>
-</div>
+
 
 
 

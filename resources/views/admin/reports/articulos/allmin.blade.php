@@ -17,27 +17,28 @@
                                 <th>Precio Costo</th>
                                 <th>Stock</th>
                                 <th>Stock_Maximo</th>
-                                <th>Fabricante</th>
+
                                 <th>Proveedor</th>
                                 <th>Sub-estante</th>
-                                
+
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($articulos as $art)
                             @if ($art->stock < $art->min_stock)
-                                <?php $total ++ ?>
+                                <?php $total++ ?>
                                 <tr>
-                                    <td>{{$art->nombre}}</td>
+                                    <td>{{$art->nombre}} - {{$art->fabricante}}</td>
+
                                     <td><?php echo $art->descripcion ?></td>
                                     <td>{{$art->nomCat}}</td>
                                     <td>Q.{{number_format($art->p_venta, 2)}}</td>
                                     <td>Q.{{number_format($art->p_costo, 2)}}</td>
                                     <td>{{$art->stock}}</td>
                                     <td>{{$art->stock_maximo}}</td>
-                                    <td>{{$art->fabricante}}</td>
+
                                     <td>{{$art->proveedor->nombre}}, {{$art->proveedor->nombre}}</td>
-                                    
+
                                     <td>{{$art->ubicacion}}</td>
                                 </tr>
                                 @endif

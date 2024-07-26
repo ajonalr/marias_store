@@ -63,15 +63,18 @@
             </div>
         </div>
 
-        <div class="col-md-5">
-            @include('admin.ventas.import.tablaventa')
-        </div>
-        <div class="col-md-7">
+        <div class="col-md-6">
             @include('admin.ventas.import.articulos')
         </div>
 
-        <div class="col-md-2 d-none">
-            <!-- @include('admin.ventas.import.datosdescrip') -->
+
+        <div class="col-md-4">
+            @include('admin.ventas.import.tablaventa')
+        </div>
+
+        <div class="col-md-2 ">
+            @include('admin.ventas.import.ultimos _vendidos')
+
         </div>
 
     </div>
@@ -81,8 +84,6 @@
 @section('scripts')
 <script src="{{asset('plugins/slim-select/slimselect.min.js')}}"></script>
 <script>
-     
-
     $(document).ready(function() {
         // $('#myModal').modal('toggle')
     });

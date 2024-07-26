@@ -18,7 +18,7 @@
 
     <div class="col-md-3">
         Cantidad
-        <input type="number" class="form-control" value="1" id="cantidadg" style="background: #f37a69; border: 4px solid #0000 !important;">
+        <input type="number" class="form-control" value="1" id="cantidadg" style="">
     </div>
 </div>
 

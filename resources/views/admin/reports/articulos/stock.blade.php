@@ -15,7 +15,6 @@
                                 <th>Precio Venta</th>
                                 <th>Stock</th>
                                 <th>Stock_Maximo</th>
-                                <th>Fabricante</th>
                                 <th>Proveedor</th>
                                 <th>Sub-estante</th>
                             </tr>
@@ -23,13 +22,14 @@
                         <tbody>
                             @foreach($articulos as $art)
                             <tr>
-                                <td>{{$art->nombre}}</td>
+                                <td>{{$art->nombre}} - {{$art->fabricante}}</td>
+
                                 <td><?php echo $art->descripcion ?></td>
                                 <td>{{$art->nomCat}}</td>
                                 <td>Q. {{number_format($art->p_venta, 2)}}</td>
                                 <td>{{$art->stock}}</td>
                                 <td>{{$art->stock_maximo}}</td>
-                                <td>{{$art->fabricante}}</td>
+
                                 <td>{{$art->p_nombre}}, {{$art->p_empresa}}</td>
                                 <td>{{$art->ubicacion}}</td>
 

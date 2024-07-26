@@ -6,8 +6,7 @@
 
 @section('content')
 <div class="container-fluid">
-     <div class="row">
-
+    <div class="row">
         <div class="col-lg-3 col-md-6">
             <div class="card text-white" style="background-color: #009c37;">
                 <div class="card-body">
@@ -116,11 +115,11 @@
             </div>
         </div>
 
-    </div> 
-    
+    </div>
+
     <div class="row mt-2">
 
-    
+
         <div class="col-md-6 card d-none">
             <h1>Articulos a Vencer en {{config('app.articulos_vencidos')}} dias </h1>
             <div class="table-resposive">
@@ -149,7 +148,7 @@
                 </table>
             </div>
         </div>
-        
+
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
@@ -172,7 +171,7 @@
         </div>
 
     </div>
-    
+
     <div class="row mt-2 mb-2">
         <div class="col mb-5">
             <div class="card">
@@ -211,7 +210,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <div class="row mb-5">
         <div class="col-md-6">

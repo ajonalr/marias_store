@@ -49,7 +49,7 @@
           ?>
           <tr>
             <td>{{$d->factura_id}} / {{$d->tipo}}</td>
-            <td>{{$d->articulo->nombre}} <?php echo $d->articulo->descripcion ?></td>
+            <td>{{$d->articulo->nombre}} - {{$d->articulo->fabricante}} <?php echo $d->articulo->descripcion ?></td>
             <td>Q. {{number_format($d->total / $d->cantidad, 2 )}}</td>
             <td>Q {{number_format($d->articulo->p_costo, 2)}}</td>
             <td>Q. {{number_format($d->descuento / $d->cantidad, 2)}}</td>

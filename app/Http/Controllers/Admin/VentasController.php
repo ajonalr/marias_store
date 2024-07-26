@@ -28,7 +28,12 @@ class VentasController extends Controller
         
         $clientes = Cliente::all();
         $categoria = Categoria::all();
-        return view('admin.ventas.restaurante-index', compact('clientes', 'categoria'));
+
+        $ventas = Ventas::whereDate('created_at', date('Y-m-d'))->groupby('factura_id')->orderby('id', 'desc')->limit(10)->get();
+
+
+
+        return view('admin.ventas.index', compact('clientes', 'categoria', 'ventas'));
     }
 
 

@@ -12,13 +12,13 @@
 
 
 @if(session('clienteid') && session('factura'))
-<div class="alert alert-info alert-dismissible fade show text-center d-none" role="alert" style="border-radius: 25px;">
+<div class="alert alert-info alert-dismissible fade show text-center " role="alert" style="border-radius: 25px;">
    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
    </button>
    <a href="{{route('venta.facturaPrint', ['idFactura' => session('factura'), 'idCliente' => session('clienteid')] )}}" target="_blank"> <i class="fa fa-print" aria-hidden="true"></i> Imprimir Recibo</a>
 </div>
-<div class="alert alert-info alert-dismissible fade show text-center" role="alert" style="border-radius: 25px;">
+<div class="alert alert-info alert-dismissible fade show text-center d-none" role="alert" style="border-radius: 25px;">
    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
    </button>
@@ -26,12 +26,12 @@
 </div>
 
 
-<div class="alert alert-dark alert-dismissible fade show text-center" role="alert" style="border-radius: 25px;">
+<!-- <div class="alert alert-dark alert-dismissible fade show text-center" role="alert" style="border-radius: 25px;">
    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
    </button>
    <a href="{{route('venta.ventaPrintComanda', ['idFactura' => session('factura'), 'idCliente' => session('clienteid')] )}}" target="_blank"> <i class="fa fa-print" aria-hidden="true"></i> Imprimir Comanda</a>
-</div>
+</div> -->
 @endif
 
 @if (session('cuadre_id'))
