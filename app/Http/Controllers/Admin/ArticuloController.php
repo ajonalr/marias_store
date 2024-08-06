@@ -71,7 +71,6 @@ class ArticuloController extends Controller
         $articulo->p_venta = $request->p_venta;
         $articulo->p_costo = $request->p_costo;
         $articulo->stock = $request->stock;
-        $articulo->img = $request->img;
         $articulo->img2 = $request->img2;
         $articulo->min_stock = $request->min_stock;
         $articulo->p_descuento = $request->p_descuento;
@@ -93,9 +92,16 @@ class ArticuloController extends Controller
         $articulo->minimo3 = $request->minimo3;
         $articulo->maximo3 = $request->maximo3;
         $articulo->precio3 = $request->precio3;
-
         $articulo->save();
 
+        if ($request->hasFile('img')) {
+            $paciente = Articulo::findOrFail($articulo->id);
+            $file = $request->file('img');
+            $nombre = time() . $file->getClientOriginalName();
+            $file->move(storage_path() . '/app/public/articulos', $nombre);
+            $paciente->img = $nombre;
+            $paciente->save();
+        }
         return back()->with(['info' => "Articulo $articulo->nombre registrado con exito", 'color' => 'success', 'articulo_id' => $articulo->id]);
     }
 
@@ -152,7 +158,7 @@ class ArticuloController extends Controller
             ->where('art.id', $id)
             ->first();
 
-            $ingre = IngredienteArticulo::where('articulo_id', $id)->get();
+        $ingre = IngredienteArticulo::where('articulo_id', $id)->get();
 
 
         return view('admin.articulos.show', ['articulo' => $articulo, 'categoria' => Categoria::all(), 'proveedor' => Proveedor::all(), 'ingredients' => $ingre]);
@@ -161,6 +167,16 @@ class ArticuloController extends Controller
     public function update(Request $request, $id)
     {
         $this->actualizar($request, $id);
+
+        if ($request->hasFile('img')) {
+            $paciente = Articulo::findOrFail($id);
+            $file = $request->file('img');
+            $nombre = time() . $file->getClientOriginalName();
+            $file->move(storage_path() . '/app/public/articulos', $nombre);
+            $paciente->img = $nombre;
+            $paciente->save();
+        }
+
         return back()->with(['info' => "Articulo actualizado con exito", 'color' => 'warning']);
     }
 

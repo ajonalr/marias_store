@@ -27,8 +27,8 @@
 
                         <div class="card p-3">
                             <div class="center">
-                                <img class="card-img-top img-fluid" style="width: 300px;" src="{{$articulo->img}}" alt="{{$articulo->nombre}}">
-                                <img class="card-img-top img-fluid" style="width: 300px;" src="{{$articulo->img2}}" alt="{{$articulo->nombre}}">
+                                <img class="card-img-top img-fluid rounded-circle" style="width: 300px;" src="{{config('app.url')}}/storage/articulos/{{$articulo->img}}" alt="{{$articulo->nombre}}">
+                                {{-- <img class="card-img-top img-fluid" style="width: 300px;" src="{{$articulo->img2}}" alt="{{$articulo->nombre}}"> --}}
                             </div>
                             <div class="card-body row">
 
@@ -106,12 +106,7 @@
                                     <p>Telefono Secundario: {{$articulo->telefono2}}</p>
                                     <p>Articulos Que Provee</p>
                                     <pre>{{$articulo->articulos}}</pre>
-
-
                                 </div>
-
-
-
                             </div>
                         </div>
 
@@ -121,7 +116,7 @@
                         <h4>Actualizar</h4>
 
 
-                        <form action="{{route('articulo.update', ['id' => $articulo->id])}}" method="POST">
+                        <form action="{{route('articulo.update', ['id' => $articulo->id])}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             @include('admin.articulos.forms.store')
@@ -146,12 +141,7 @@
 
 <script src="{{ asset('plugins/ckeditor/ckeditor.js')  }}"></script>
 <script>
-    CKEDITOR.replace('editor1', {
-        uiColor: '#9AB8F3',
-    });
-    CKEDITOR.replace('editor2', {
-        uiColor: '#ffdcdc',
-    });
+   
 </script>
 
 @endsection

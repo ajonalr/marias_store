@@ -15,7 +15,7 @@
 
                     <h4 class="card-title text-uppercase text-center display-4">nuevo menu</h4>
 
-                    <form action="{{route('articulo.store')}}" method="post" autocomplete="off">
+                    <form action="{{route('articulo.store')}}" method="post" autocomplete="off" enctype="multipart/form-data">
                         @csrf
                         @include('admin.articulos.forms.store')
 

@@ -175,10 +175,13 @@
 
 <div class="row justify-content-center">
     <div class="col-md-4">
-        <div class="">
-            <label for="">Imagen</label>
-            <input type="text" class="form-control" name="img" value="@isset($articulo->img){{ $articulo->img }}@endisset">
+
+        <div class="form-group">
+          <label for="img">Imagen</label>
+          <input type="file" class="form-control-file" name="img" id="img" placeholder="" aria-describedby="fileHelpId" accept="image/*" >
+          <small id="fileHelpId" class="form-text text-muted">Ingrese Foto</small>
         </div>
+
     </div>
     <div class="col-md-4">
         <div class="">
