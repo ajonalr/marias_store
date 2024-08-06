@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="{{asset('logos/ico.ico')}}">
 
 
     <link rel="stylesheet" href="{{asset('theme/css/bootstrap.min.css')}}">

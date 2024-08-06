@@ -19,7 +19,7 @@
 
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Articulos</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list"></i> Articulos</a>
                <ul class="sub-menu children dropdown-menu">
 
                   @can('articulos_listado')
@@ -99,7 +99,7 @@
 
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Categorias</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-layer-group"></i>Categorias</a>
                <ul class="sub-menu children dropdown-menu">
 
                   @can('categoria_list')
@@ -139,7 +139,7 @@
 
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Proveedores</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-secret"></i>Proveedores</a>
                <ul class="sub-menu children dropdown-menu">
 
                   @can('proveedor_list')
@@ -174,7 +174,7 @@
 
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Ventas</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cart-plus"></i>Ventas</a>
                <ul class="sub-menu children dropdown-menu">
                   @can('venta_inicio')
                   <li>
@@ -209,7 +209,7 @@
                </ul>
             </li>
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Cortizacion</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-flag"></i> Cortizacion</a>
                <ul class="sub-menu children dropdown-menu">
 
                   <li>
@@ -224,7 +224,7 @@
             </li>
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Sugerencias</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-question"></i>Sugerencias</a>
                <ul class="sub-menu children dropdown-menu">
 
                   <li>
@@ -238,7 +238,7 @@
                </ul>
             </li>
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Caja</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-money-bill"></i>Caja</a>
                <ul class="sub-menu children dropdown-menu">
 
                   <li>
@@ -276,7 +276,7 @@
                </ul>
             </li>
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Clientes</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i></i>Clientes</a>
                <ul class="sub-menu children dropdown-menu">
 
                   <li>
@@ -313,8 +313,8 @@
             </li>
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Paquetes</a>
-               <ul class="sub-menu children dropdown-menu">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-box"></i></i>Paquetes</a>
+               <ul class=" sub-menu children dropdown-menu">
 
                   <li>
                      <i class="fa fa-plus"></i>
@@ -329,7 +329,7 @@
 
 
             <li class="menu-item-has-children dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-plus"></i>Mobiliario</a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-chair"></i>Mobiliario</a>
                <ul class="sub-menu children dropdown-menu">
 
                   <li><a href="{{route('mobiliario.index')}}">Inicio</a></li>

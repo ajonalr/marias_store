@@ -41,7 +41,7 @@
                 </a>
             </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 d-none">
             <div class="form-group">
                 <input type="text" class="form-control" name="mesa" placeholder="NUMERO DE MESA">
             </div>

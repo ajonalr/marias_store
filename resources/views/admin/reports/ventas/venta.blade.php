@@ -149,11 +149,6 @@
                             <td class="precio">Q.{{number_format($deu->total, 2)}} <?php $t += $deu->total; ?></td>
                         </tr>
                         @endforeach
-                        <tr>
-                            <td>1</td>
-                            <td>PROPINA</td>
-                            <td>Q. 5.00</td>
-                        </tr>
                     </tbody>
                 </table>
 
@@ -173,11 +168,11 @@
                 <div class="col">
 
                     <h5 class="text-right text-info">
-                        <p>Total de Venta: Q. {{number_format($t + 5, 2)}}</p>
+                        <p>Total de Venta: Q. {{number_format($t, 2)}}</p>
                         @if (($descuetoArticulos + $factura->descuento) > 0)
                         <p>Total Descuentos: Q. {{$descuetoArticulos + $factura->descuento}}</p>
                         @endif
-                        <p>Total a Cancelar: Q. {{ number_format($t + 5, 2) }}</p>
+                        <p>Total a Cancelar: Q. {{ number_format($t, 2) }}</p>
 
                     </h5>
                 </div>
